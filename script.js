@@ -13,17 +13,18 @@ function init() {
 
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener('click', boxClick)
+    //alert(this.boxClick)
   }
 
   function boxClick() {
     if (currentPlayer === 1) {
       this.classList.add('clickX');
       player1.push(this.id)
-      alert("player1 = " + player1)
+    //  alert("player1 = " + player1)
     } else {
       this.classList.add('clickO');
       player2.push(this.id)
-      alert("player2 = " + player1)
+    //  alert("player2 = " + player1)
     }
     switchPlayer()
       // alert('box is clicked');
@@ -48,6 +49,8 @@ function init() {
     [2, 4, 6]
   ];
 
+
+
   function winningCombi() {
     for (var j = 0; j < winningCombi.length; j++) {
 if (true) {
@@ -57,6 +60,15 @@ if (true) {
 }
     }
 
+  }
+
+  document.getElementById('newbutton').addEventListener('click' , fnNewGame);
+
+  function fnNewGame() {
+    location.reload(true);
 
   }
+
+
+
 }
