@@ -10,7 +10,7 @@
   color: blue;
 
 }
-.box {
+.row {
   width: 614px;
   height: 614px;
   margin: 0 auto;
@@ -18,66 +18,24 @@
   background-color: green;
 
 }
-.one {
+.box {
   height: 200px;
   width: 200px;
   border: 1px solid white;
   background-color: white;
   display: inline-block;
 }
-.two {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
+/*#one{
+  background-color: red;
+
+}*/
+
+.clickX {
+background-image: url('/img/Cross.png');
+background-size: cover;
 }
-.three {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
-}
-.four {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
-}
-.five {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
-}
-.six {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
-}
-.seven {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
-}
-.eight {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
-}
-.nine {
-  height: 200px;
-  width: 200px;
-  border: 1px solid white;
-  background-color: white;
-  display: inline-block;
+.clickO {
+  background-image: url('/img/O.png');
+  background-size: cover;
+
 }

@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tick Tack Toe</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="script.js"></script>
 
-  </head>
-  <body>
-    <main>
-      <h1 class="title">Tic Tac Toe</h1>
-      <h2 class="info">A simple game of logic</h2>
-      <div class="container">
-        <div>
-          <select id="grid"></select>
-          <button name="NewGame" class="newGame" value="Start a New Game" onClick="fnNewGame()">Start a New Game</button>
-                </div>
-        <div class="box">
-          <div class="one"></div>
-          <div class="two"></div>
-          <div class="three"></div>
-          <div class="four"></div>
-          <div class="five"></div>
-          <div class="six"></div>
-          <div class="seven"></div>
-          <div class="eight"></div>
-          <div class="nine"></div>
+<head>
+  <meta charset="utf-8">
+  <title>Tick Tack Toe</title>
+  <link rel="stylesheet" href="css/style.css">
 
-        </div>
+
+</head>
+
+<body>
+  <main>
+    <h1 class="title">Tic Tac Toe</h1>
+    <h2 class="info">A simple game of logic</h2>
+    <div class="container">
+      <div>
+        <select id="grid">
+            <option value="player1">Player 1</option>
+            <option value="player2">Player 2</option>
+          </select>
+
+        <button name="NewGame" class="newGame" value="Start a New Game" onClick="fnNewGame()">Start a New Game</button>
       </div>
+      <div class="row">
+        <div id="one" class="box"></div>
+        <div id="two" class="box"></div>
+        <div id="three" class="box"></div>
+        <div id="four" class="box"></div>
+        <div id="five" class="box"></div>
+        <div id="six" class="box"></div>
+        <div id="seven" class="box"></div>
+        <div id="eight" class="box"></div>
+        <div id="nine" class="box"></div>
+      </div>
+      <div class="play 1">
+        <button type="button" name="button"></button>
+      </div>
+    </div>
 
-    </main>
+  </main>
+  <script type="text/javascript" src="script.js"></script>
+</body>
 
-  </body>
 </html>

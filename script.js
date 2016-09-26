@@ -1,60 +1,62 @@
-var Xturn = true;
-        var nummoves = 0;
-        var cat;
-        function tictactoe(square) {
-            var value = square.value;
-            var doc1 = document.getElementById("k1").value;
-            var doc2 = document.getElementById("k2").value;
-            var doc3 = document.getElementById("k3").value;
-            var doc4 = document.getElementById("k4").value;
-            var doc5 = document.getElementById("k5").value;
-            var doc6 = document.getElementById("k6").value;
-            var doc7 = document.getElementById("k7").value;
-            var doc8 = document.getElementById("k8").value;
-            var doc9 = document.getElementById("k9").value;
+document.addEventListener('DOMContentLoaded', init)
 
-            for (nummoves = 0; nummoves < 2; nummoves++) {
+function init() {
 
-                if (doc1 == "X") {
-                    cat = document.getElementById("k2").value = "O";
-                    Xturn = true;
-                }
+  var numPlayer = 2;
+  var clickCount = 0;
+  var currentPlayer = 1;
+  var player1 = [];
+  var player2 = [];
 
-                if (doc2 = "X") {
-                    cat = document.getElementById("k4").value = "O";
-                    Xturn = true;
-                }
+  //var winningCombi = [[], [], []]
+  var boxes = document.querySelectorAll('.box')
 
-                if (doc3 == "X") {
-                    cat = document.getElementById("k5").value = "O";
-                    Xturn = true;
-                }
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].addEventListener('click', boxClick)
+  }
 
-                if (doc4 == "X") {
-                    car = document.getElementById("k9").value = "O";
-                }
-            }
+  function boxClick() {
+    if (currentPlayer === 1) {
+      this.classList.add('clickX');
+      player1.push(this.id)
+      alert("player1 = " + player1)
+    } else {
+      this.classList.add('clickO');
+      player2.push(this.id)
+      alert("player2 = " + player1)
+    }
+    switchPlayer()
+      // alert('box is clicked');
+  }
+  // switchPlayer()
 
-            for (nummoves = 2; nummoves < 3; nummoves++) {
+  function switchPlayer() {
+    if (currentPlayer === 1) {
+      currentPlayer = 2
+    } else {
+      currentPlayer = 1
+    }
+  }
+  var winningCombi = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
 
-                if (doc1 == "X") {
-                    cat = document.getElementById("k7").value = "O";
-                    Xturn = true;
-                }
+  function winningCombi() {
+    for (var j = 0; j < winningCombi.length; j++) {
+if (true) {
 
-            }
+} else {
 
-            if (value != "X" && value != "O") {
-                if (Xturn == true) {
-                    square.value = "X";
-                    return Xturn = false;
-                    nummoves++;
-                } else if (Xturn == false) {
-                    square.value = "O";
-                    return Xturn = true;
-                    nummoves++;
-                }
-            } else {
-                alert("That square has been clicked.");
-            }
-        }
+}
+    }
+
+
+  }
+}
